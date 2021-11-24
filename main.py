@@ -1,8 +1,7 @@
 import discord
 import modules.commands as cmds
 
-seem_interested = ["ok brudi", "und dann?", "interesting", "aha", "soso", "ist mir auch mal passiert", "ja, hi, was?",
-                   "kein problem, nevermind", "ja", "cool", "nichts nichts", "cool cool", "mhm"]
+authorized = ["227483302833946626"]
 
 
 class MyClient(discord.Client):
@@ -45,7 +44,15 @@ async def exec_cmd(command, message):
         await message.channel.send(response)
         print(f"[LOG]: returned '{response}'")
     elif command[1] == "profile":
-        await profile_commands(command[2::], message)
+        response = cmds.profile(command[2::])
+        await message.channel.send(response)
+    elif command[1] == "item":
+        if str(message.author.id) in authorized:
+            response = cmds.item(command[2::])
+        else:
+            response = "You are not authorized to add items to the repository\n" \
+                       "Please dm `tedzards509#3737` for permissions"
+        await message.channel.send(response)
     else:
         response = f"Unknown command `{command[1]}`, try `sbw help` for a list of all commands"
         await message.channel.send(response)

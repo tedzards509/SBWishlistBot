@@ -42,6 +42,20 @@ def test(param):
     return output
 
 
+def item(param):
+    if param[0] == "add":
+        if len(param) == 2:
+            output = item_add(name=param[1], required=None)
+        elif len(param) > 2:
+            output = item_add(name=param[1], required=param[2::])
+    return output
+
+
+def item_add(name, required):
+    log = f"ayy: name:`{name}`, required:`{required}`"
+    return log
+
+
 def sbw_help(param):
     """
     Bruh I'm sacrificing my docstrings to make this not as ugly and you use it like this?!
