@@ -7,10 +7,12 @@ authorized = ["227483302833946626",
 
 class MyClient(discord.Client):
     async def on_ready(self):
-        print(" ___  ___       __      __ _      _     _  _      _   \n"
+        print("_"*54 + "\n"
+              " ___  ___       __      __ _      _     _  _      _   \n"
               "/ __|| _ )      \\ \\    / /(_) ___| |_  | |(_) ___| |_ \n"
               "\\__ \\| _ \\       \\ \\/\\/ / | |(_-/|   \\ | || |(_-/|  _|\n"
-              "|___/|___/        \\_/\\_/  |_|/__/|_||_||_||_|/__/ \\__|\n")
+              "|___/|___/        \\_/\\_/  |_|/__/|_||_||_||_|/__/ \\__|\n"
+              + "_"*16 + " By tedzards509#3737  " + "_"*16 + "\n")
         print('Logged on as {0}!'.format(self.user))
 
     async def on_message(self, message):
