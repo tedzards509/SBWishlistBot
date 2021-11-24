@@ -52,10 +52,6 @@ async def exec_cmd(command, message):
         print(f"[LOG]: returned '{response}'")
 
 
-async def profile_commands(command, message):
-    return command, message
-
-
 client = MyClient()
 with open(file="./token") as token:
     client.run(token.readlines()[0])

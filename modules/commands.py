@@ -25,6 +25,10 @@ def test_raw(param):
     return output
 
 
+def profile(param):
+    return param
+
+
 def test(param):
     """
     Returns your input as you wrote it
