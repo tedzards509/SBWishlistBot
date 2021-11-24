@@ -32,7 +32,9 @@ def test(param):
     if not param:
         output = "Test erfolgreich"
     else:
-        output = param
+        output = ""
+        for element in param:
+            output += f"{element} "
     return output
 
 
