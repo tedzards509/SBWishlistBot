@@ -1,4 +1,8 @@
 import discord
+import modules.commands as cmds
+
+seem_interested = ["ok brudi", "und dann?", "interesting", "aha", "soso", "ist mir auch mal passiert", "ja, hi, was?",
+                   "kein problem, nevermind", "ja", "cool", "nichts nichts", "cool cool", "mhm"]
 
 
 class MyClient(discord.Client):
