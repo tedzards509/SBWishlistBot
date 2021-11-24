@@ -1,7 +1,8 @@
 import discord
 import modules.commands as cmds
 
-authorized = ["227483302833946626"]
+authorized = ["227483302833946626",
+              "337138327549509632"]
 
 
 class MyClient(discord.Client):
