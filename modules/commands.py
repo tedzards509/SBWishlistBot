@@ -30,7 +30,7 @@ def test(param):
     Returns your input as you wrote it
     """
     if not param:
-        output = "Test erfolgreich"
+        output = "Test erfolgreich !"
     else:
         output = ""
         for element in param:
