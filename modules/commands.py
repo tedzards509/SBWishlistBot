@@ -1,3 +1,12 @@
+import json
+
+
+def load_json(path):
+    with open(path) as item_file:
+        item_json = json.load(item_file)
+        return item_json
+
+
 def command_name():
     """
     Template so I can copypasta.
