@@ -53,6 +53,7 @@ async def exec_cmd(command, message):
             response = "You are not authorized to add items to the repository\n" \
                        "Please dm `tedzards509#3737` for permissions"
         await message.channel.send(response)
+        print(f"[LOG]: returned '{response}'")
     else:
         response = f"Unknown command `{command[1]}`, try `sbw help` for a list of all commands"
         await message.channel.send(response)
