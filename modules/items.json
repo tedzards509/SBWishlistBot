@@ -3,7 +3,8 @@
     "alias": ["example", "ex"],
     "items_required": [
       "EXAMPLE_COMPONENT:10"
-    ]
+    ],
+    "time_required": "36000"
   },
   "EXAMPLE_COMPONENT": {
     "alias": ["component", "comp"],
