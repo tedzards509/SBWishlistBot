@@ -1,1 +1,15 @@
- 
+{
+  "EXAMPLE_NAME": {
+    "alias": ["example", "ex"],
+    "items_required": [
+      "EXAMPLE_COMPONENT:10"
+    ]
+  },
+  "EXAMPLE_COMPONENT": {
+    "alias": ["component", "comp"],
+    "items_required": [
+      "None"
+      ],
+    "wiki_url": "None"
+  }
+}
