@@ -57,5 +57,5 @@ async def profile_commands(command, message):
 
 
 client = MyClient()
-with open(file="./token") as f:
-    client.run(f.readlines()[0])
+with open(file="./token") as token:
+    client.run(token.readlines()[0])
