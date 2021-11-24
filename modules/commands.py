@@ -50,9 +50,13 @@ def sbw_help(param):
     if not param:
         output = availaible_commands
     elif param[0] == "help":
-        output = sbw_help.__doc__
+        output = f"`{param[0]}`: {sbw_help.__doc__}"
     elif param[0] == "ping":
-        output = ping.__doc__
+        output = f"`{param[0]}`: {ping.__doc__}"
+    elif param[0] == "test":
+        output = f"`{param[0]}`: {test.__doc__}"
+    elif param[0] == "testraw":
+        output = f"`{param[0]}`: {test_raw.__doc__}"
     else:
         output = f"Unknown command `{param[0]}`, \n{availaible_commands}"
     return output
