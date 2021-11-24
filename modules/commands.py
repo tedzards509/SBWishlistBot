@@ -1,4 +1,7 @@
 def command_name():
+    """
+    Template so I can copypasta.
+    """
     output = "ayy you found my template"
     return output
 
@@ -12,7 +15,9 @@ def ping(client):
 
 
 def test_raw(param):
-    """Returns your input"""
+    """
+    Returns your input as a list of strings
+    """
     if not param:
         output = "Test erfolgreich"
     else:
@@ -21,7 +26,9 @@ def test_raw(param):
 
 
 def test(param):
-    """Returns your input"""
+    """
+    Returns your input as you wrote it
+    """
     if not param:
         output = "Test erfolgreich"
     else:
@@ -38,6 +45,7 @@ def sbw_help(param):
                           "`sbw help` - Displays this help message\n" \
                           "`sbw ping` - Returns my ping\n" \
                           "`sbw test` - really only exists for testing, ignore pls\n" \
+                          "`sbw testraw` - also only for testing\n" \
                           "For more details use `sbw help [command]`"
     if not param:
         output = availaible_commands
