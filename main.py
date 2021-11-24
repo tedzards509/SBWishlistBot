@@ -7,6 +7,10 @@ seem_interested = ["ok brudi", "und dann?", "interesting", "aha", "soso", "ist m
 
 class MyClient(discord.Client):
     async def on_ready(self):
+        print(" ___  ___       __      __ _      _     _  _      _   \n"
+              "/ __|| _ )      \\ \\    / /(_) ___| |_  | |(_) ___| |_ \n"
+              "\\__ \\| _ \\       \\ \\/\\/ / | |(_-/|   \\ | || |(_-/|  _|\n"
+              "|___/|___/        \\_/\\_/  |_|/__/|_||_||_||_|/__/ \\__|\n")
         print('Logged on as {0}!'.format(self.user))
 
     async def on_message(self, message):
