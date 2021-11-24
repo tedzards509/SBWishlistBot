@@ -13,13 +13,12 @@ class MyClient(discord.Client):
         print('Logged on as {0}!'.format(self.user))
 
     async def on_message(self, message):
-        if not message.author == self.user:
-            message.content = message.content.lower()
-            if message.content.startswith("sbw "):
-                command = message.content.split(" ")
-                command = normalize(command)
-                print(f"[LOG]: {message.author} tried to execute '{command}'")
-                await exec_cmd(command, message)
+        message.content = message.content.lower()
+        if not message.author == self.user and message.content.startswith("sbw "):
+            command = message.content.split(" ")
+            command = normalize(command)
+            print(f"[LOG]: {message.author} tried to execute '{command}'")
+            await exec_cmd(command, message)
 
 
 def normalize(commands):
