@@ -78,9 +78,10 @@ def item(param):
 
 def item_add(name, required):
     """
+    usage: `sbw item add [name] [required:amount] [required:amount] ...`
     add an item to the repository
     """
-    log = f"ayy: name:`{name}`, required:`{required}`"
+    log = f"added entry with name:`{name}` and required:`{required}`"
     return log
 
 
