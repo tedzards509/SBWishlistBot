@@ -55,6 +55,7 @@ def item(param):
     """
     Availaible commands: 
     `sbw item add`
+    `sbw item info`
     """
     if not param:
         output = item.__doc__
@@ -76,6 +77,14 @@ def item_add(name, required):
     """
     log = f"ayy: name:`{name}`, required:`{required}`"
     return log
+
+
+def item_info(name):
+    items = load_json("./modules/items.json")
+    """
+    displays info about an item in the repository
+    """
+    return items
 
 
 def sbw_help(param):
