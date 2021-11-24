@@ -1,8 +1,12 @@
 import discord
 import modules.commands as cmds
+import json
 
-authorized = ["227483302833946626",
-              "337138327549509632"]
+
+def load_json(path):
+    with open(path) as item_file:
+        item_json = json.load(item_file)
+        return item_json
 
 
 class MyClient(discord.Client):
