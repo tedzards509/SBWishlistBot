@@ -60,12 +60,17 @@ def item(param):
     if not param:
         output = item.__doc__
     elif param[0] == "add":
-        if len(param) == 2:
+        if len(param) == 1:
+            output = "At least name your item ;-;"
+        elif len(param) == 2:
             output = item_add(name=param[1], required=None)
         elif len(param) > 2:
             output = item_add(name=param[1], required=param[2::])
         else:
-            output = "Something went wrong. Let me just.. <!227483302833946626>"
+            output = "Something went wrong. Let me just.. @<!227483302833946626>"
+    elif param[0] == "info":
+        # if len(param) == 1:
+        output = f"info about `{param[1]}`:{item_info(param[1])}"
     else:
         output = item.__doc__
     return output
