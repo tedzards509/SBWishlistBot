@@ -43,15 +43,28 @@ def test(param):
 
 
 def item(param):
-    if param[0] == "add":
+    """
+    Availaible commands: 
+    `sbw item add`
+    """
+    if not param:
+        output = item.__doc__
+    elif param[0] == "add":
         if len(param) == 2:
             output = item_add(name=param[1], required=None)
         elif len(param) > 2:
             output = item_add(name=param[1], required=param[2::])
+        else:
+            output = "Something went wrong. Let me just.. <!227483302833946626>"
+    else:
+        output = item.__doc__
     return output
 
 
 def item_add(name, required):
+    """
+    add an item to the repository
+    """
     log = f"ayy: name:`{name}`, required:`{required}`"
     return log
 
